@@ -8,7 +8,10 @@ export default function VoteForm(props) {
         <>
             {
                 props.voteItem.map((item) => {
-                    return (<article className="vote" key={item} onClick={ ()=>setVote(item) }>{ item }</article>)
+                    return (
+                        <article className="vote" key={item} onClick={() => setVote(item)}>
+                            {item}
+                        </article>)
                 })
             }
         </>
