@@ -1,7 +1,14 @@
 import "./Style/VoteForm.css";
 export default function VoteForm(props) {
     const setVote = function (e) {
-        
+        if (window?.INIT?.ga) {
+            gtag('event', 'click', {
+                'send_to': window?.INIT?.ga?.id,
+                'event_label': e,
+                'event_category': 'Bookings',
+                'transport_type': 'beacon'
+            })
+        };
     }
 
     return (
