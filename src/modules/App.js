@@ -23,7 +23,14 @@ export default function App() {
 
     return (
         <>
-            <VoteForm voteItem={["Dog", "House", "Test"]} />
+            <VoteForm title="Stem på din favorit" voteItem={
+                [
+                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Valdemar" },
+                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victor" },
+                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victoria" },
+                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Tristan" }
+                ]}
+            />
         </>
     )
 }
