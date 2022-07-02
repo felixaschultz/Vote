@@ -33,9 +33,12 @@ export default function App() {
     return (
         <>
             <Router>
-                <Nav />
+                <header className="main-header">
+                    <Link className="logo" to="/">ReactVoting</Link>
+                    <Nav />
+                </header>
                 <Switch>
-                    <Route exact path="/">
+                    <Route path="/" exact>
                         <Home />
                     </Route>
                     <Route path="/vote">

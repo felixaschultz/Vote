@@ -1,11 +1,12 @@
-const Link =  window.ReactRouterDOM.Link;
+const Link = window.ReactRouterDOM.Link;
+import "./Style/Nav.css";
 
 export default function Nav() {
     return (
         <>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/vote">Vote</Link>
+            <nav className="navigation">
+                <Link className="navigation__link" to="/">Home</Link>
+                <Link className="navigation__link" to="/vote">Vote</Link>
             </nav>
         </>
     )
