@@ -4,7 +4,8 @@ export default function SuccessWindow(props) {
         <>
             <article className="successWindow">
                 <section className="successWindow__content">
-                    <h3>Tak for din afstemmelse</h3>
+                    <h2>Tak for din afstemmelse</h2>
+                    <p>Du afstemmte for {props.name}</p>
                 </section>
             </article>
         </>

@@ -4,17 +4,18 @@ const { useState, useSWR } = React;
 
 export default function VoteForm(props) {
     const [first, setfirst] = useState(false);
+    const [name, setName] = useState("");
     const setVote = function (e) {
         if (window?.INIT?.ga) {
             gtag('event', 'click', {
                 'send_to': INIT?.ga?.id,
-                'event_label': e.name,
+                'event_label': e,
                 'event_category': 'Bookings',
                 'transport_type': 'beacon'
             })
         };
         setfirst(true);
-
+        setName(e);
     }
 
     return (
@@ -31,7 +32,7 @@ export default function VoteForm(props) {
                     })
                 }
                 {
-                    (first) ? <SuccessWindow /> : null
+                    (first) ? <SuccessWindow name={name} /> : null
                 }
             </main>
         </>
