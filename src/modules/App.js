@@ -44,10 +44,10 @@ export default function App() {
                     <Route path="/vote">
                         <VoteForm title="Stem på din favorit" voteItem={
                             [
-                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Valdemar" },
-                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victor" },
-                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victoria" },
-                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Tristan" }
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Test1" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Test2" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Test3" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Test4" }
                             ]}
                         />
                     </Route>

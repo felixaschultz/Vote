@@ -22,9 +22,9 @@ export default function VoteForm(props) {
             <main className="content">
                 <h1>{ props.title }</h1>
                 {
-                    props?.voteItem?.map((item) => {
+                    props?.voteItem?.map((item, key) => {
                         return (
-                            <article className="vote" key={item.name} onClick={() => { setVote(item) }}>
+                            <article className="vote" key={key} onClick={() => { setVote(item.name) }}>
                                 <img className="vote__image" src={item.img} alt={item.name} />
                                 <h3>{item.name}</h3>
                             </article>)
