@@ -1,5 +1,14 @@
 import "./App.css";
+const Router = window.ReactRouterDOM.BrowserRouter;
+const Route =  window.ReactRouterDOM.Route;
+const Link =  window.ReactRouterDOM.Link;
+const Prompt =  window.ReactRouterDOM.Prompt;
+const Switch = window.ReactRouterDOM.Switch;
+const Redirect = window.ReactRouterDOM.Redirect;
+
+import Home from "../components/Home/Home";
 import VoteForm from "../components/VoteForm/VoteForm";
+import Nav from "../components/Nav/Nav";
 
 export default function App() {
     if (window?.INIT?.ga) {
@@ -23,14 +32,25 @@ export default function App() {
 
     return (
         <>
-            <VoteForm title="Stem på din favorit" voteItem={
-                [
-                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Valdemar" },
-                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victor" },
-                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victoria" },
-                    { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Tristan" }
-                ]}
-            />
+            <Router>
+                <Nav />
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/vote">
+                        <VoteForm title="Stem på din favorit" voteItem={
+                            [
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Valdemar" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victor" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Victoria" },
+                                { img: "https://new.felix-schultz.net/assets/IMG_0942.jpg", name: "Tristan" }
+                            ]}
+                        />
+                    </Route>
+                    <Redirect to="/" />
+                </Switch>
+            </Router>
         </>
     )
 }

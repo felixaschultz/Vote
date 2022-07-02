@@ -1,6 +1,6 @@
 import "./Style/VoteForm.css";
 import SuccessWindow from "../Success/Success.js";
-const { useState } = React;
+const { useState, useSWR } = React;
 
 export default function VoteForm(props) {
     const [first, setfirst] = useState(false);
@@ -14,6 +14,7 @@ export default function VoteForm(props) {
             })
         };
         setfirst(true);
+
     }
 
     return (
