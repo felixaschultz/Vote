@@ -14,8 +14,10 @@ export default function VoteForm(props) {
                 'transport_type': 'beacon'
             })
         };
-        setfirst(true);
-        setName(e);
+
+        fetch("http://localhost:8082/api").then((res) => res.json()).then((res) => {
+            console.log(res);
+        })
     }
 
     return (
